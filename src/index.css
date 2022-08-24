@@ -17,6 +17,7 @@
 }
 .navList {
   list-style-type: none;
+  
 }
 .navList .listItem {
   display: inline-block;
@@ -28,4 +29,25 @@
 }
 .logo{
   margin: 5px;
+}
+
+.checkoutForm{
+  background-color: grey;
+}
+
+li a {
+  justify-content: space-between;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.itemList{
+  display: flex;
+}
+.etailTitulo{
+  display: block;
+}
+.item{
+  display: flex;
+  flex-wrap: wrap;
 }
