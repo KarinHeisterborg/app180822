@@ -7,8 +7,8 @@ const NavBar = () => {
             <Link to= {"/"}><img className='logo' src= "/logo7.png" alt="logo" /></Link> 
             <Link to= {"/"}> <p className="title">MI FERIA HOME</p></Link>
             <li className='navList'>
-              <Link to= {"/category/Cervezas"}>Cervezas</Link>
-              <Link to= {"/category/Pokemon"}>Pokemones</Link>
+              <Link to= {"/category/Macetas"}>Macetas</Link>
+              <Link to= {"/category/Combos"}>Combos</Link>
             </li>
             <Link to= {"/cart"} ><Cartwidget/></Link> 
           </nav>
