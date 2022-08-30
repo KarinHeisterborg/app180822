@@ -27,6 +27,7 @@ const ItemListContainer = () => {
       return query(productsCollection, where("category", "==", categoryName))
      }
      }
+     
     getDocs(filter())
        .then ((result) =>{
         const docs = result.docs;
