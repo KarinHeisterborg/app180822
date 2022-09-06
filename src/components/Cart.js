@@ -7,25 +7,25 @@ const Cart = () => {
   const { cart, deleteItem, emptyCart, getItemPrice } = useContext(CartContext);
   const [orderId, setOrderId] = useState(null);
 
-  if ((cart.length === 0) && (orderId)) {
+  if (cart.length === 0 && orderId) {
     return (
-      <div>
+      <div className="order">
         <h2>Compra exitosa!</h2>
         <h4>Tu numero de Orden es:</h4>
         <h3>{orderId} </h3>
         <Link to={"/"}>
-          <button>Retornar a la HomePage</button>
+          <button className="btnComprar">Retornar a la HomePage</button>
         </Link>
       </div>
     );
   }
   return (
-    <div>
+    <div className="cart">
       <div>
         {cart.length > 0 ? (
           cart.map((element, index) => {
             return (
-              <div key={index}>
+              <div className="cartDetail" key={index}>
                 <div>
                   <img src={element.pictureURL} alt={element.name}></img>
                 </div>
@@ -35,24 +35,31 @@ const Cart = () => {
                   <h3>Unidades: {element.counter}</h3>
                 </div>
                 <div>
-                  <button onClick={() => deleteItem(element.id)}>Delete</button>
+                  <button
+                    className="btnComprar"
+                    onClick={() => deleteItem(element.id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             );
           })
         ) : (
-          <div>
+          <div className="order">
             <h1>Tu carrito esta vacio</h1>
             <Link to={"/"}>
-              <button>Home</button>
+              <button className="btnComprar">Home</button>
             </Link>
           </div>
         )}
 
         {cart.length > 0 && (
-          <div>
-            <button onClick={() => emptyCart()}>Vaciar Carrito</button>
-            
+          <div className="cartDetail">
+            <button className="btnComprar" onClick={() => emptyCart()}>
+              Vaciar Carrito
+            </button>
+
             <h2>Total: ${getItemPrice()} </h2>
           </div>
         )}

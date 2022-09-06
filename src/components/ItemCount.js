@@ -10,14 +10,28 @@ const ItemCount = ({ counter, setCounter, onAdd, stock }) => {
     }
   };
 
-
   return (
-  <div>
-   <button onClick={add}>+</button>
-   <h3>{counter} </h3>
-   <button onClick={substract}>-</button>
-   <button onClick={() => {onAdd()}}>Agregar al carrito</button>
-   </div>
-  )
+    <div className="counter">
+      <div className="counter">
+        <button className="btnComprar" onClick={substract}>
+          -
+        </button>
+
+        <h3>{counter} </h3>
+        <button className="btnComprar" onClick={add}>
+          +
+        </button>
+      </div>
+
+      <button
+        className="btnComprar"
+        onClick={() => {
+          onAdd();
+        }}
+      >
+        Agregar al carrito
+      </button>
+    </div>
+  );
 };
 export default ItemCount;
