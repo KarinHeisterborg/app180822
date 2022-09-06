@@ -4,7 +4,7 @@ Mi Feria Home Online Shop es una plataforma ecommerce que permite al usuario com
 Esta Single Page Application fue desarrollada por Karin Heisterborg utilizando React.js.
 La interfaz fue realizada con REACTJS-CREATE REACT APP, permitiendo realizar compra de productos, cuya orden se alamacena en firebase.
 
-     Link del proyecto [https://app180822-karinheisterborg.vercel.app/]
+     Link del proyecto [Link](https://app180822-karinheisterborg.vercel.app/)
 ## Instalación
 1. Descargar el repositorio, yendo a "Code" y "Download ZIP".
 2. Abrir el repositorio en un Editor de Código, como Visual Studio Code.
